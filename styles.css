@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8E9DD;
+  font-family: "DM Sans", sans-serif;
+}
+body main {
+  width: min-width(95%, 375px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .balance {
+  color: #FFFBF6;
+  background-color: #EC755D;
+  width: 343px;
+  height: 97px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 2rem 0;
+  padding: 0 1rem;
+}
+body main .balance p {
+  font-size: 0.938rem;
+  position: relative;
+}
+body main .balance p span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+body main .chart {
+  background-color: #FFFBF6;
+  height: 421px;
+  width: 343px;
+  padding: 1rem;
+}
+body main .chart h1 {
+  color: #382314;
+  font-size: 1.5rem;
+}
+body main .chart .chart-container {
+  height: 177px;
+}
+body main .chart .month-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #F8E9DD;
+  margin-top: 1rem;
+}
+body main .chart .month-total .this-month-text {
+  color: #92857A;
+  font-size: 0.938rem;
+}
+body main .chart .month-total .this-month-text span {
+  font-size: 1.875rem;
+  color: #382314;
+}
+body main .chart .month-total .last-month-text {
+  color: #92857A;
+  font-size: 0.938rem;
+}
+body main .chart .month-total .last-month-text span {
+  color: #382314;
+}
+body main .chart .month-total .this-month-text, body main .chart .month-total .last-month-text {
+  margin-top: 3rem;
+}/*# sourceMappingURL=styles.css.map */

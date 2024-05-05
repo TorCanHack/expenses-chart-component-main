@@ -8,6 +8,12 @@
   
   <title>Frontend Mentor | Expenses chart component</title>
 
+  <link rel="stylesheet" href="styles.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,28 +22,63 @@
 </head>
 <body>
 
-  My balance
-  $921.48
+  <main>
 
-  Spending - Last 7 days
+    <article class="balance">
+     
+      <p>My balance <br/>
+      <span>$921.48</span></p>
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+    </article>
+    
+   
 
-  Total this month
-  $478.33
+    <article class="chart">
 
-  +2.4%
-  from last month
+      <h1>Spending - Last 7 days</h1>
+
+      <div class="chart-container">
+      
+
+        <canvas id="myExpensesChart"></canvas>
+  
+        
+        
+      </div>
+
+      <div class="month-total">
+        <p class="this-month-text">
+          Total this month <br/>
+          <span>$478.33</span>
+        </p>
+  
+        <p class="last-month-text">
+          <span>+2.4%</span><br/>
+          from last month
+        </p>
+
+      </div>
+
+    </article>
+
+
+    
+  
+
+  
+
+  
+
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="index.js"></script>
+
 </body>
 </html>
