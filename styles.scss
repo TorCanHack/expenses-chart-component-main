@@ -53,6 +53,7 @@ body {
             height: 421px;
             width: 343px;
             padding: 1rem;
+            border-radius: 1rem;
            
 
             h1 {
@@ -107,5 +108,75 @@ body {
 
             
         }
+    }
+
+    @media screen and (min-width: 1440px) {
+
+        main {
+
+            width: 1440px;
+            .balance {
+                width: 540px;
+                height: 125px;
+
+                p {
+
+                    font-size: 1.125rem;
+
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+
+
+
+
+            }
+
+            .chart {
+
+                width: 540px;
+                height: 511px;
+
+                .chart-container {
+                    height: 308px;
+
+                    #myExpensesChart:hover {
+
+                        cursor: pointer;
+
+
+                    }
+                   
+                }
+
+                .month-total {
+
+                    margin-top: -2.5rem;
+                    padding: 0 1rem;
+
+                    .this-month-text {
+
+                        font-size: 1.125rem;
+
+                        span {
+                            font-size: 3rem;
+                        }
+
+                    }
+
+                    .last-month-text {
+
+                        font-size: 1.125rem;
+
+                    }
+                }
+
+
+
+            }
+
+        }
+        
     }
 }

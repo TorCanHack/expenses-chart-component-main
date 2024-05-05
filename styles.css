@@ -39,6 +39,7 @@ body main .chart {
   height: 421px;
   width: 343px;
   padding: 1rem;
+  border-radius: 1rem;
 }
 body main .chart h1 {
   color: #382314;
@@ -72,4 +73,42 @@ body main .chart .month-total .last-month-text span {
 }
 body main .chart .month-total .this-month-text, body main .chart .month-total .last-month-text {
   margin-top: 3rem;
+}
+@media screen and (min-width: 1440px) {
+  body main {
+    width: 1440px;
+  }
+  body main .balance {
+    width: 540px;
+    height: 125px;
+  }
+  body main .balance p {
+    font-size: 1.125rem;
+  }
+  body main .balance p span {
+    font-size: 2rem;
+  }
+  body main .chart {
+    width: 540px;
+    height: 511px;
+  }
+  body main .chart .chart-container {
+    height: 308px;
+  }
+  body main .chart .chart-container #myExpensesChart:hover {
+    cursor: pointer;
+  }
+  body main .chart .month-total {
+    margin-top: -2.5rem;
+    padding: 0 1rem;
+  }
+  body main .chart .month-total .this-month-text {
+    font-size: 1.125rem;
+  }
+  body main .chart .month-total .this-month-text span {
+    font-size: 3rem;
+  }
+  body main .chart .month-total .last-month-text {
+    font-size: 1.125rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
