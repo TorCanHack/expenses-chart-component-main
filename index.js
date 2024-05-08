@@ -8,19 +8,11 @@ fetch('data.json')
 
 function createChart(data) {
 
+
+    // map the Json data to the chart's data format
     const days = data.map(item => item.day);
     const amounts = data.map(item => item.amount);
     
-
-    const formattedAmount = amounts.map(amount => `$${amount}`)
-
-    total_amount = 0
-
-    for (let i = 0; i < amounts.length; i++ ){
-        total_amount += amounts[i];
-    }
-    
-
 
     const defaultBarColor = '#EC755D';
     const currentDayColor = '#76B5BC'
