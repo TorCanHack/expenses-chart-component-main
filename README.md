@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/TorCanHack/expenses-chart-component-main)
+- Live Site URL: [live site URL](https://torcanhack.github.io/expenses-chart-component-main/)
 
 ## My process
 
@@ -56,21 +56,21 @@ Users should be able to:
 ### What I learned
 
 
-This is my first time building a bar chart on the web. I was exciteted about it because data vislaulization is a valuable skill every web developer should possess.
+This is my first time building a bar chart on the web. I was excited about it because data visualisation is a valuable skill every web developer should possess.
 
-To build a chart I used the `<canva>` element in HTML. The canva element is used rendering graphics and animations on the web. Letting HTML do the heavy lifting of graphics and animations helpsimprove performance and scalibiity. 
+To build a chart I used the `<canva>` element in HTML. The `<canva>` element is used to render graphics and animations on the web. Letting HTML do the heavy lifting of graphics and animations helps improve performance and scalability. 
 
-I added the `<canva>` to the HTML code and give it an id of #myExpenseChart.
+I added the `<canva>` to the HTML code and gave it an id of myExpenseChart.
 
 ````html
 <canva id="myExpenseChart"><canva/>
 ````
 
-A chart makes data more intelligible. A chart is only as good as the data it diplays. In this challenge I have been provided with the data in the form of a json file. It is a bonus point if you can dynamically size the bars using the json file. To acheive this, I will be using the `fetch()` API in javascript.
+A chart makes data more intelligible. A chart is only as good as the data it displays. In this challenge, I have been provided with the data as a JSON file. It is a bonus point if you can dynamically size the bars using the JSON file. To achieve this, I will be using the `fetch()` API in JavaScript.
 
 `Fetch` is a modern interface that allows you to make network requests to servers. It's used to request resources such as files, APIs or web pages over the internet.
 
-So, I will use fetch to retrieve the json data as follows:
+So, I will use fetch to retrieve the JSON data as follows:
 
 ````js
 fetch('data.json')
@@ -81,36 +81,36 @@ fetch('data.json')
 })
 ````
 
-initally i was confused as to why im fetching a json file and still parsin it as json. It turns out when you request a resource via fetch what you get is a response object which is a raw text. The response object provides several methods to parse this raw text and `.json` is one of these methods. 
+Initially, I was confused as to why I was fetching a JSON file and still parsing it as JSON. It turns out that when you request a resource via `fetch` what you get is a response object, which is a raw text. The response object provides several methods to parse this raw text and `.json` is one of these methods. 
 
-After i retrive the raw text and parse is as json using `.json` method. I now have javascript object i can manipulate. Hence,I now use that data to create a chat.
+After I retrieve the raw text and parse it as JSON using `.json` method. I now have a JavaScript object I can manipulate. Hence, I now used that data to create a chat.
 
  The `createChat()`is a function that creates a chat with the data provided. 
 
- Inside  `createChat()` I map the JSON data to the chart's data format so they fit neatly into the X nd Y axis of the chat. 
+ Inside  `createChat()` I map the JSON data to the chart's data format so they fit neatly into the X and Y axis of the chat. 
 
  ````js 
-    // map the Json data to the chart's data format
+    // map the JSON data to the chart's data format
     const days = data.map(item => item.day);
     const amounts = data.map(item => item.amount);
  ````
- part of the challenge is to See the current day’s bar highlighted in a different colour to the other bars. I create two variables that hold the cyan and red colors. Then I create a variable called `today` that gets what week of the day it is by using the Date().tolocaleString() method.
+ A part of the challenge is to see the current day’s bar highlighted in a different colour compared to the other bars. I created two variables that hold the cyan  and red colours. Then I create a variable called `today` that gets what week of the day it is by using the `Date().tolocaleString() method.`
 
- In the code below, using the map feature, I created an array for the background property called backgroundColors. the tenery expression states that if an index in the array matches today give the color cyan, otherwise give it a red color.   
+ In the code below, using the map feature, I created an array for the background property called backgroundColors. The tenery expression states that if an index in the array matches today give the color cyan, otherwise give it a red color.   
 
 ````js
 const backgroundColors = days.map(day => day === today? currentDayColor : defaultBarColor);
 ````
 
-The next step is to access the `<canva>`, so that i can create my chart and i access it as follows:
+The next step is to access the `<canva>`, so that I can create my chart and I access it as follows:
 
 ````js
     const ctx = document.getElementById('myExpensesChart').getContext('2d');
 ````
 
-as I am accessing the `<canva>`element with the id of myExpensesChart, i call the `getContext('2d')` method. This method is called on  the `<cavna>` element to obtain the rendering context and its drawing functions. The context i needed in this instant case is two-dimensional drawing context for my chart.
+As I am accessing the `<canva>` element with the id of myExpensesChart, I call the `getContext('2d')` method. This method is called on the `<cavna>` element to obtain the rendering context and its drawing functions. The context i needed in this instant case is a two-dimensional drawing context for my chart.
 
-Now, that i have my rendering context. I can go ahead and create my chart. The code below creates the chart.
+Now, that I have my rendering context. I can go ahead and create my chart. The code below creates the chart.
 
 ````js
  const myExpensesChart = new Chart(ctx, {
@@ -126,7 +126,7 @@ Now, that i have my rendering context. I can go ahead and create my chart. The c
             }]
         },...
 ````
-`new Chart()` creates a  chart using the Chart.js library. `type: 'bar` specifies the type of chart to create, which in this case is the bar chart. `data` contains all the labels and data for the chart.
+`new Chart()` creates a chart using the Chart.js library. `type: 'bar` specifies the type of chart to create, which in this case is the bar chart. `data` contains all the labels and data for the chart.
 
 Chart.js has a tooltip pluggin that displays information when you hover over it. This pluggin accepts a callback function that enables you to modify the information displayed via the tooltip. 
 
@@ -153,9 +153,7 @@ It was interesting building a chart and I look forward to building more charts.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-I like the thinking behind the fetch API. I would like to experiment and build more with it so that i will have a solid grasp of its inner workings. 
+I like the thinking behind the fetch API. I would like to experiment and build more with it so that I will have a solid grasp of its inner workings. 
 
 
 
